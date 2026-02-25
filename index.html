@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="zh-Hant"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;title&gt;《十七》音樂專題&lt;/title&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">* {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>box-sizing: border-box;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">body {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family: "SimSun", "Songti TC", serif;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: #fdfdfd;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color: #222;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>line-height: 1.7;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding-bottom: 60px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* 頂部欄 */</p>
+<p class="p1">.nav {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 16px 22px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-bottom: 1px solid #eee;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position: sticky;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>z-index: 99;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.logo {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 36px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>height: 36px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>object-fit: contain;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>cursor: pointer;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* 右上角選單按鈕 */</p>
+<p class="p1">.menu-toggle {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>height: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>user-select: none;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* 選單本體：預設隱藏 */</p>
+<p class="p1">.menu {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>top: 68px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>right: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border: 1px solid #eee;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 12px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>gap: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>min-width: 130px;</p>
+<p class="p1">}</p>
+<p class="p1">.menu.show {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: flex;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.menu-item {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color: #222;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>cursor: pointer;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* 頁面本體 */</p>
+<p class="p1">.page {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>max-width: 720px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin: 40px auto;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding: 0 20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: none;</p>
+<p class="p1">}</p>
+<p class="p1">.page.active {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: block;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.main-title {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 22px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-weight: normal;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-bottom: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-align: center;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.sub-title {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin: 28px 0 14px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-weight: normal;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.content {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>white-space: pre-line;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.page-img {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>max-width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 420px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin: 22px auto;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius: 4px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.audio-player {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin: 12px 0;</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- 頂部 --&gt;</p>
+<p class="p1">&lt;div class="nav"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;img src="logo.png" class="logo" onclick="goPage('home')"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="menu-toggle" onclick="toggleMenu()"&gt;☰&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- 展開選單 --&gt;</p>
+<p class="p1">&lt;div class="menu" id="menu"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="menu-item" onclick="goPage('produce')"&gt;關於製作&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="menu-item" onclick="goPage('track')"&gt;關於曲&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="menu-item" onclick="goPage('lyric')"&gt;關於詞&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="menu-item" onclick="goPage('mv')"&gt;關於MV&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="menu-item" onclick="goPage('huaxu')"&gt;花絮&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- 首頁 --&gt;</p>
+<p class="p1">&lt;div class="page active" id="home"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="main-title"&gt;關於《十七》&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;img src="mv_cover.png" class="page-img"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="content"&gt;</p>
+<p class="p1">十七的我們，像是站在光與暗的交界，可能迷茫又踟躕；卻會好奇，忍不住臆想與未來有關的一切；就像歌詞裡寫的，十七歲的我們會感到焦躁不安，也會恣意狂歡，擁有如青草般旺盛的生命力。每個人十七歲時的青春，本就獨一無二，但希望通過《十七》，可以帶你感受我們的十七歲，體驗我們的旅程的徬徨、懵懂，和成長；通過這首歌，回想起如花季般香醇短暫的青蔥歲月，回憶起十七歲時的自己。</p>
+<p class="p2"><br></p>
+<p class="p1">這首歌可能不是一個完美的作品，但這也恰巧和十七歲一樣，雖有遺憾，但也是生命中不可或缺的時光。</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- 關於製作 --&gt;</p>
+<p class="p1">&lt;div class="page" id="produce"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sub-title"&gt;-《十七》？&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="content"&gt;</p>
+<p class="p1">《十七》這兩個僅僅只有四筆的字，卻代表的是人生中一個特殊的時間點，離成年只有一步之遙，而離青澀咫尺遠近。十七歲的我們，像是站在光與暗的交界，可能迷茫又踟躕；卻會好奇，忍不住臆想與未來有關的一切；就像歌詞裡寫的，十七歲的我們會感到焦躁不安，也會恣意狂歡，擁有如青草般旺盛的生命力。每個人十七歲時的青春，本就獨一無二，但希望通過《十七》，可以帶你感受我們的十七歲，體驗我們的旅程的徬徨、懵懂，和成長；通過這首歌，回想起如花季般香醇短暫的青蔥歲月，回憶起十七歲時的自己。</p>
+<p class="p2"><br></p>
+<p class="p1">這首歌可能不是一個完美的作品，但這也恰巧和十七歲一樣，雖有遺憾，但也是生命中不可或缺的時光。</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- 關於曲 --&gt;</p>
+<p class="p1">&lt;div class="page" id="track"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sub-title"&gt;-作曲 編曲 mixing？&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="content"&gt;</p>
+<p class="p1">wini：</p>
+<p class="p1">這首歌並不是我寫的第一首歌，但是是第一首由自己在家錄製的歌，用著拼拼湊湊勉強能用的設備錄製，除了Guitar及Bass以外的樂器都是midi。</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;img src="image_track_01.png" class="page-img"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="content"&gt;</p>
+<p class="p1">說實話，「寫歌」本身這件事，並不困難，困難的是，在有期待的前提下，如何寫出來會令自己滿意。與我從前錄製guitar cover不同，即使彈錯，也不過是我已知並接受了的技術上的不足，但今次，這個logic file裡面每一條track都需要由我自己輸入，所以拍子上的偏差，是不容許存在的，因為一旦錯一條，全曲便會變得混亂。這首歌是團隊的，容不得在我這裡開始出錯。我開始埋怨自己，無論是技術上還是天賦上，也開始審視自己，自己是否有能力去完成與大家的承諾。好在，比起留在原地躊躇不前，我選擇了接受自己，把編曲控制在自己可以掌握的難度上。錄音當練習，幾個小節的片段可以錄上百次，比起錄音上的製作，編曲上，只要不如意便從頭來過，可謂任性，所以每個版本的demo都大相徑庭。</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;img src="image_track_02.png" class="page-img"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="content"&gt;</p>
+<p class="p1">最終版本敲定下來其實我是不滿意的，旋律普通不入耳、吉他太平淡、chord progression不夠豐富、琴聲太生硬、細節不夠、歌聲難聽刺耳、和聲太突兀等等。我總認為能做得更好，但是我現時能力貌似就到這裡了，時間上也不容許我繼續一改再改，青春總是會留上些遺憾的，我這樣安慰自己。</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;audio controls class="audio-player" src="audio_track_01.mp3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;audio controls class="audio-player" src="audio_track_02.mp3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;audio controls class="audio-player" src="audio_track_03.mp3"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="content"&gt;</p>
+<p class="p1">我不是愛主動的人，但是製作總是要尋求意見的。雖然製作上有諸多不如意，但是在我開始主動的過程中我接收到了許多意料之外的溫暖，是同學試聽時表現的驚喜、是老師知曉後對製作進度的關心還有家裡人的鼓勵。這次歌曲裡用來錄製的bass甚至是和朋友借來的，謝謝你，還有謝謝幫我寫鼓的朋友。自己的製作能得到如此多回饋與幫助，我想自己簡直是世界上最幸福的人。</p>
+<p class="p1">從f1開始學習的吉他與其餘自學的樂器注定了這次製作的粗糙，望大家嘴下留情。</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div style="font-size:14px; color:#999; margin:26px 0; line-height:1.7;"&gt;</p>
+<p class="p1">這首歌很淡，我時常想著把她寫得更豐富，更有趣，可是我發現，怎麼加都不行，變得奇怪，變得不似她，或者說，不像我。也許她本來就該如此平淡，就像我本人對青春的體驗，我沒有轟轟烈烈的故事，這次畢業mv也是一時興起。</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- 關於詞 --&gt;</p>
+<p class="p1">&lt;div class="page" id="lyric"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sub-title"&gt;- 關於詞&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="content"&gt;（待補充）&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- 關於MV --&gt;</p>
+<p class="p1">&lt;div class="page" id="mv"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sub-title"&gt;- 關於MV&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="content"&gt;（待補充）&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- 花絮 --&gt;</p>
+<p class="p1">&lt;div class="page" id="huaxu"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="sub-title"&gt;- 花絮&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="content"&gt;（待補充）&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">// 切換頁面</p>
+<p class="p1">function goPage(id) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('.page').forEach(el =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>el.classList.remove('active')</p>
+<p class="p1"><span class="Apple-converted-space">  </span>})</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById(id).classList.add('active')</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('menu').classList.remove('show')</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// 展開/收起選單</p>
+<p class="p1">function toggleMenu() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('menu').classList.toggle('show')</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
